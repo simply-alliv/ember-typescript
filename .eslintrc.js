@@ -1,17 +1,16 @@
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  plugins: [
-    'ember'
-  ],
+  plugins: ['ember'],
   extends: [
-    'eslint:recommended',
-    'plugin:ember/recommended'
-  ],
+    'eslint:recommended', // uses eslint's common linting rules
+    'plugin:ember/recommended', // uses ember-specific linting rules
+    'plugin:@typescript-eslint/recommended', // uses typescript-specific linting rules
+  ], 
   env: {
     browser: true
   },
